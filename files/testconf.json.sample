@@ -1,0 +1,17 @@
+{
+	"emotion-subscription-key": "YOUR-SUBSCRIPTION-KEY-FOR-EMOTION-API",
+	"video-subscription-key": "YOUR-SUBSCRIPTION-KEY-FOR-VIDEO-API",
+	"computervision-subscription-key": "YOUR-SUBSCRIPTION-KEY-FOR-COMPUTERVISION-API",
+	"face-subscription-key": "YOUR-SUBSCRIPTION-KEY-FOR-FACE-API",
+
+	"celebrity-face-image": "PATH-TO-A-CELEBRITY-FACE-IMAGE",
+	"landmark-image": "PATH-TO-A-LANDMARK-IMAGE",
+	"handwritten-image": "PATH-TO-A-HANDWRITTEN-TEXT-IMAGE",
+	"text-image": "PATH-TO-A-TEXT-IMAGE",
+	"face-image1": "PATH-TO-A-FACE-IMAGE",
+	"face-image2": "PATH-TO-A-FACE-IMAGE(same person)",
+	"face-video": "PATH-TO-A-FACE-VIDEO",
+	"video": "PATH-TO-A-VIDEO",
+	"generated-image": "PATH-OF-A-NEWLY-GENERATED-IMAGE",
+	"generated-video": "PATH-OF-A-NEWLY-GENERATED-VIDEO"
+}
