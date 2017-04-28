@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
-	//"time"
 )
 
 type FaceDetectResult struct {
