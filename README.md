@@ -90,6 +90,39 @@ func main() {
 }
 ```
 
+Also, there are wrapper clients for clarity:
+
+```go
+// clients.go
+package main
+
+import (
+	"fmt"
+
+	"github.com/meinside/ms-cognitive-services-go/client/computervision"
+	"github.com/meinside/ms-cognitive-services-go/client/emotion"
+	"github.com/meinside/ms-cognitive-services-go/client/face"
+	"github.com/meinside/ms-cognitive-services-go/client/video"
+)
+
+const (
+	ComputerVisionApiKey = "abcdefghijklmnopqrstuvwxyz0123456789"
+	EmotionApiKey        = "abcdefghijklmnopqrstuvwxyz0123456789"
+	FaceApiKey           = "abcdefghijklmnopqrstuvwxyz0123456789"
+	VideoApiKey          = "abcdefghijklmnopqrstuvwxyz0123456789"
+)
+
+func main() {
+	c := computervision.NewClient(ComputerVisionApiKey)
+	e := emotion.NewClient(EmotionApiKey)
+	f := face.NewClient(FaceApiKey)
+	v := video.NewClient(VideoApiKey)
+
+	fmt.Printf("%+v, %+v, %+v, %+v\n", c, e, f, v)
+}
+```
+
 ## License
 
 MIT
+
