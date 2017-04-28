@@ -263,8 +263,6 @@ func ComputerVisionGetThumbnail(
 //
 // location      : API location
 // key           : subscription key for this API
-// image         : string(image url) or []byte(image bytes array)
-// maxCandidates : default 1
 func ComputerVisionGetModels(
 	location ApiLocation,
 	key string,
@@ -326,6 +324,7 @@ func ComputerVisionOcr(
 //
 // location : API location
 // key      : subscription key for this API
+// image    : string(image url) or []byte(image bytes array)
 // model    :
 func ComputerVisionDomainSpecificRecognize(
 	location ApiLocation,
@@ -433,6 +432,7 @@ func ComputerVisionRecognizeHandwritten(
 //
 // location : API location
 // key      : subscription key for this API
+// image    : string(image url) or []byte(image bytes array)
 func ComputerVisionTagImage(
 	location ApiLocation,
 	key string,
