@@ -27,10 +27,10 @@ func NewClientWithLocation(location cognitive.ApiLocation, apiKey string) *Clien
 
 // Detect
 //
-// image               : string(image url) or []byte(image bytes array)
-// returnFaceId        : (default: true)
-// returnFaceLandmarks : (default: false)
-// faceAttributes      : "age", "gender", "headPose", "smile", "facialHair", "glasses", or "emotion"
+// image                : string(image url) or []byte(image bytes array)
+// returnFaceId         : (default: true)
+// returnFaceLandmarks  : (default: false)
+// returnFaceAttributes : "age", "gender", "headPose", "smile", "facialHair", "glasses", or "emotion"
 func (c *Client) Detect(
 	image interface{},
 	returnFaceId bool,

@@ -197,12 +197,12 @@ type FaceUpdatePersonGroupRequest struct {
 //
 // https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236
 //
-// location            : API location
-// key                 : subscription key for this API
-// image               : string(image url) or []byte(image bytes array)
-// returnFaceId        : (default: true)
-// returnFaceLandmarks : (default: false)
-// faceAttributes      : "age", "gender", "headPose", "smile", "facialHair", "glasses", or "emotion"
+// location             : API location
+// key                  : subscription key for this API
+// image                : string(image url) or []byte(image bytes array)
+// returnFaceId         : (default: true)
+// returnFaceLandmarks  : (default: false)
+// returnFaceAttributes : "age", "gender", "headPose", "smile", "facialHair", "glasses", or "emotion"
 func FaceDetect(
 	location ApiLocation,
 	key string,
@@ -222,7 +222,7 @@ func FaceDetect(
 		params["returnFaceLandmarks"] = "true"
 	}
 	if len(returnFaceAttributes) > 0 {
-		params["faceAttributes"] = strings.Join(returnFaceAttributes, ",")
+		params["returnFaceAttributes"] = strings.Join(returnFaceAttributes, ",")
 	}
 
 	var result []byte
