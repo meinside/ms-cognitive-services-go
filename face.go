@@ -12,13 +12,13 @@ type FaceDetectResult struct {
 	FaceRectangle  Rectangle        `json:"faceRectangle"`
 	FaceLandmarks  map[string]Point `json:"faceLandmarks"`
 	FaceAttributes struct {
-		Age        float32            `json:"age"`
+		Age        float64            `json:"age"`
 		Gender     string             `json:"gender"`
-		Smile      float32            `json:"smile"`
-		FacialHair map[string]float32 `json:"facialHair"`
+		Smile      float64            `json:"smile"`
+		FacialHair map[string]float64 `json:"facialHair"`
 		Glasses    string             `json:"glasses"`
-		HeadPose   map[string]float32 `json:"headPose"`
-		Emotion    map[string]float32 `json:"emotion"`
+		HeadPose   map[string]float64 `json:"headPose"`
+		Emotion    map[string]float64 `json:"emotion"`
 	} `json:"faceAttributes"`
 }
 
@@ -39,7 +39,7 @@ type FaceFindSimilarRequest2 struct {
 type FaceFindSimilarResult struct {
 	PersistedFaceId string  `json:"persistedFaceId"`
 	FaceId          string  `json:"faceId"`
-	Confidence      float32 `json:"confidence"`
+	Confidence      float64 `json:"confidence"`
 }
 
 type FaceGroupRequest struct {
@@ -55,7 +55,7 @@ type FaceIdentifyRequest1 struct {
 	FaceIds                   []string `json:"faceIds"`
 	PersonGroupId             string   `json:"personGroupId"`
 	MaxNumOfCandidateReturned int      `json:"maxNumOfCandidatesReturned"`
-	ConfidenceThreshold       float32  `json:"confidenceThreshold"`
+	ConfidenceThreshold       float64  `json:"confidenceThreshold"`
 }
 
 type FaceIdentifyRequest2 struct {
@@ -68,7 +68,7 @@ type FaceIdentifyResult struct {
 	FaceId     string `json:"faceId"`
 	Candidates []struct {
 		PersonId   string  `json:"personId"`
-		Confidence float32 `json:"confidence"`
+		Confidence float64 `json:"confidence"`
 	} `json:"candidates"`
 }
 
@@ -85,7 +85,7 @@ type FaceVerifyRequest2 struct {
 
 type FaceVerifyResult struct {
 	IsIdentifical bool    `json:"isIdentical"`
-	Confidence    float32 `json:"confidence"`
+	Confidence    float64 `json:"confidence"`
 }
 
 type FaceAddToListResult struct {
@@ -345,7 +345,7 @@ func FaceIdentify(
 	faceIds []string,
 	personGroupId string,
 	maxNumOfCandidatesReturned int,
-	confidenceThreshold float32,
+	confidenceThreshold float64,
 ) (processResult []FaceIdentifyResult, err error) {
 	apiUrl := "https://" + string(location) + ".api.cognitive.microsoft.com/face/v1.0/identify"
 

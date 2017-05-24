@@ -46,7 +46,7 @@ func (c *Client) MotionDetect(
 	frameSamplingValue int,
 	detectionZones [][]cognitive.Point,
 	detectLightChange bool,
-	mergeTimeThreshold float32,
+	mergeTimeThreshold float64,
 	progressNotifier func(status string, progress float32),
 ) (processResult cognitive.VideoProcessingResult2, err error) {
 	return cognitive.VideoMotionDetect(

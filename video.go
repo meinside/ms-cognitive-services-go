@@ -21,10 +21,10 @@ type VideoProcessingResult1 struct {
 		Duration int64 `json:"duration"`
 		Interval int64 `json:"interval"`
 		Events   [][]struct {
-			X      float32 `json:"x"`
-			Y      float32 `json:"y"`
-			Width  float32 `json:"width"`
-			Height float32 `json:"height"`
+			X      float64 `json:"x"`
+			Y      float64 `json:"y"`
+			Width  float64 `json:"width"`
+			Height float64 `json:"height"`
 		} `json:"events"`
 	} `json:"fragments"`
 }
@@ -50,10 +50,10 @@ type VideoProcessingResult2 struct {
 			Type      int    `json:"type"`
 			TypeName  string `json:"typeName"`
 			Locations []struct {
-				X      float32 `json:"x"`
-				Y      float32 `json:"y"`
-				Width  float32 `json:"width"`
-				Height float32 `json:"height"`
+				X      float64 `json:"x"`
+				Y      float64 `json:"y"`
+				Width  float64 `json:"width"`
+				Height float64 `json:"height"`
 			} `json:"locations"`
 			RegionId int `json:"regionId"`
 		} `json:"events"`
@@ -151,7 +151,7 @@ func VideoMotionDetect(
 	frameSamplingValue int,
 	detectionZones [][]Point,
 	detectLightChange bool,
-	mergeTimeThreshold float32,
+	mergeTimeThreshold float64,
 	progressNotifier func(status string, progress float32),
 ) (processResult VideoProcessingResult2, err error) {
 	const apiUrl = "https://westus.api.cognitive.microsoft.com/video/v1.0/detectmotion"

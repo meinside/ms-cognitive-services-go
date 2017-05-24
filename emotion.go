@@ -26,8 +26,8 @@ type EmotionProcessingResult struct {
 		Duration int64 `json:"duration"`
 		Interval int64 `json:"interval"`
 		Events   [][]struct {
-			WindowFaceDistribution map[string]float32 `json:"windowFaceDistribution"`
-			WindowMeanScores       map[string]float32 `json:"windowMeanScores"`
+			WindowFaceDistribution map[string]float64 `json:"windowFaceDistribution"`
+			WindowMeanScores       map[string]float64 `json:"windowMeanScores"`
 		} `json:"events"`
 	} `json:"fragments"`
 }

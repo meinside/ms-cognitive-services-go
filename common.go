@@ -21,8 +21,8 @@ type Rectangle struct {
 }
 
 type Point struct {
-	X float32 `json:"x"`
-	Y float32 `json:"y"`
+	X float64 `json:"x"`
+	Y float64 `json:"y"`
 }
 
 type ApiResponseError struct {

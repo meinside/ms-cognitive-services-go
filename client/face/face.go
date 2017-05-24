@@ -95,7 +95,7 @@ func (c *Client) Identify(
 	faceIds []string,
 	personGroupId string,
 	maxNumOfCandidatesReturned int,
-	confidenceThreshold float32,
+	confidenceThreshold float64,
 ) (processResult []cognitive.FaceIdentifyResult, err error) {
 	return cognitive.FaceIdentify(
 		c.Location,

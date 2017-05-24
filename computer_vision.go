@@ -12,34 +12,34 @@ import (
 type ComputerVisionImageAnalyzeResult struct {
 	Categories []struct {
 		Name   string  `json:"name"`
-		Score  float32 `json:"score"`
+		Score  float64 `json:"score"`
 		Detail struct {
 			Celebrities []struct {
 				Name          string    `json:"name"`
 				FaceRectangle Rectangle `json:"faceRectangle"`
-				Confidence    float32   `json:"confidence"`
+				Confidence    float64   `json:"confidence"`
 			} `json:"celebrities"`
 			Landmarks []struct {
 				Name       string  `json:"name"`
-				Confidence float32 `json:"confidence"`
+				Confidence float64 `json:"confidence"`
 			} `json:"landmarks"`
 		} `json:"detail"`
 	} `json:"categories"`
 	Adult struct {
 		IsAdultContent bool    `json:"isAdultContent"`
 		IsRacyContent  bool    `json:"isRacyContent"`
-		AdultScore     float32 `json:"adultScore"`
-		RacyScore      float32 `json:"racyScore"`
+		AdultScore     float64 `json:"adultScore"`
+		RacyScore      float64 `json:"racyScore"`
 	} `json:"adult"`
 	Tags []struct {
 		Name       string  `json:"name"`
-		Confidence float32 `json:"confidence"`
+		Confidence float64 `json:"confidence"`
 	} `json:"tags"`
 	Description struct {
 		Tags     []string `json:"tags"`
 		Captions []struct {
 			Text       string  `json:"text"`
-			Confidence float32 `json:"confidence"`
+			Confidence float64 `json:"confidence"`
 		} `json:"captions"`
 	}
 	RequestId string `json:"requestId"`
@@ -71,7 +71,7 @@ type ComputerVisionImageDescribeResult struct {
 		Tags     []string `json:"tags"`
 		Captions []struct {
 			Text       string  `json:"text"`
-			Confidence float32 `json:"confidence"`
+			Confidence float64 `json:"confidence"`
 		} `json:"captions"`
 	} `json:"description"`
 	RequestId string `json:"requestId"`
@@ -99,13 +99,13 @@ type ComputerVisionDomainSpecificResult struct {
 	Result map[string][]struct {
 		Name          string    `json:"name"`
 		FaceRectangle Rectangle `json:"faceRectangle"`
-		Confidence    float32   `json:"confidence"`
+		Confidence    float64   `json:"confidence"`
 	} `json:"result"`
 }
 
 type ComputerVisionOcrResult struct {
 	Language    string  `json:"language"`
-	TextAngle   float32 `json:"textAngle"`
+	TextAngle   float64 `json:"textAngle"`
 	Orientation string  `json:"orientation"`
 	Regions     []struct {
 		BoundingBox string `json:"boundingBox"`
@@ -133,7 +133,7 @@ type ComputerVisionHandwrittenProcessingResult struct {
 type ComputerVisionTagImageResult struct {
 	Tags []struct {
 		Name       string  `json:"name"`
-		Confidence float32 `json:"confidence"`
+		Confidence float64 `json:"confidence"`
 	} `json:"tags"`
 	RequestId string `json:"requestId"`
 	Metadata  struct {
